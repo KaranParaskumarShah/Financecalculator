@@ -53,3 +53,17 @@ Vercel and Cloudflare Pages SPA fallbacks are included.
 ## Privacy
 
 The SI Financial Twin and scenario features use browser-local storage. No backend is required.
+
+
+## Cloudflare Workers deployment
+
+This project is configured for Cloudflare Workers static assets with React Router SPA fallback.
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy` (or `npm run deploy`)
+- Root directory: `/`
+- Assets directory: `dist`
+- SPA fallback: enabled through `wrangler.jsonc`
+- Production branch: `main`
+
+The project uses Vite 6.4.1 because current Wrangler automatic configuration requires Vite 6+ for Vite projects. The Wrangler version is pinned to 4.147.0 so the Cloudflare deployment does not silently install a different CLI version.

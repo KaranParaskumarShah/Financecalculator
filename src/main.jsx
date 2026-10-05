@@ -1,7 +1,6 @@
 import React,{useMemo,useState,useEffect} from 'react';
 import {createRoot} from 'react-dom/client';
-import {BrowserRouter,useLocation,useNavigate,useParams,Link} from 'react-router-dom';
-import {Routes,Route} from 'react-router-dom';
+import {BrowserRouter,useLocation,Link} from 'react-router-dom';
 import {ArrowRight,BrainCircuit,Calculator,ChevronDown,CircleHelp,Globe2,Menu,Search,Sparkles,TrendingUp,X,Save,Download,Upload,ArrowLeftRight,Trash2,Link2,ShieldCheck} from 'lucide-react';
 import './styles.css';
 
