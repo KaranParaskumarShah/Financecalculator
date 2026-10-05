@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f8fb" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="description" content="FinanceCalculator.si — SI Super Intelligence finance calculators for investing, loans, retirement, taxes and everyday money decisions." />
+    <link rel="canonical" href="https://financecalculator.si/" />
+    <title>FinanceCalculator.si — SI Super Intelligence</title>
+    <style>
+      html, body, #root { min-height: 100%; margin: 0; }
+      body { background: #f6f8fb; }
+      .fc-boot { min-height: 100vh; display: grid; place-items: center; padding: 24px; box-sizing: border-box; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #101828; }
+      .fc-boot-card { width: min(560px, 100%); padding: 32px; border: 1px solid #e5eaf1; border-radius: 20px; background: #fff; box-shadow: 0 18px 60px rgba(16,24,40,.08); }
+      .fc-boot-brand { font-size: 13px; font-weight: 800; letter-spacing: .08em; color: #2257e6; }
+      .fc-boot-card h1 { margin: 12px 0 8px; font-size: 28px; }
+      .fc-boot-card p { margin: 0; color: #667085; line-height: 1.6; }
+      .fc-boot-status { margin-top: 20px; padding: 12px 14px; border-radius: 12px; background: #f7f9fc; font-size: 13px; color: #475467; }
+      .fc-boot-error { margin-top: 16px; white-space: pre-wrap; overflow: auto; padding: 14px; border-radius: 12px; background: #fff4f4; color: #b42318; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="fc-boot" id="fc-boot">
+        <div class="fc-boot-card">
+          <div class="fc-boot-brand">FINANCECALCULATOR.SI · SI SUPER INTELLIGENCE</div>
+          <h1>Starting the SI engine…</h1>
+          <p>Loading the calculation, decision and local intelligence layers.</p>
+          <div class="fc-boot-status" id="fc-boot-status">Initializing FinanceCalculator.si</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__FC_APP_MOUNTED = false;
+      window.__FC_BOOT_TIMER = setTimeout(function () {
+        if (window.__FC_APP_MOUNTED) return;
+        var status = document.getElementById('fc-boot-status');
+        if (status) status.textContent = 'The SI interface did not start. Open F12 → Console to see the exact browser error.';
+      }, 5000);
+      window.addEventListener('error', function (event) {
+        var status = document.getElementById('fc-boot-status');
+        if (status) status.textContent = 'Browser error: ' + (event.message || 'unknown error') + '. Open F12 → Console for details.';
+      });
+      window.addEventListener('unhandledrejection', function (event) {
+        var status = document.getElementById('fc-boot-status');
+        if (status) status.textContent = 'Startup error: ' + String(event.reason || 'unknown error') + '. Open F12 → Console for details.';
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
