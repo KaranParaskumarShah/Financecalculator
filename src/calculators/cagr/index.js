@@ -2,6 +2,7 @@ import { analyzeFlows, simulateForward, benchmarkValue, valueForXirr, timelineRo
 import { confidenceFromBands } from '../../lib/stats.js'
 import Lab from './Lab.jsx'
 
+
 const SAMPLE_INR = `# date, amount  (money you put in is negative; what you hold or took out is positive)
 2021-01-10, -100000
 2022-01-10, -50000
