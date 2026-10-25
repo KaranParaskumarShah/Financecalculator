@@ -1,0 +1,21 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;
+  background-image:radial-gradient(900px 500px at 85% -10%,color-mix(in srgb,var(--cyan) 14%,transparent),transparent),radial-gradient(800px 500px at -10% 30%,color-mix(in srgb,var(--violet) 14%,transparent),transparent)}
+h1,h2,h3,h4,.brand,.hr-value,.gauge-num,b.big{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.02em}
+h1,h2,h3,h4,p{margin:0}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:6px}
+.container{width:min(1240px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.neural{position:fixed;inset:0;z-index:0;pointer-events:none}
+.page,.site-header,.site-footer{position:relative;z-index:1}
+.page{min-height:70vh}
+.center{text-align:center}.tiny{font-size:12.5px;color:var(--muted)}
+.c-cyan{color:var(--cyan)}.c-green{color:var(--green)}.c-rose{color:var(--rose)}
+.grad{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--shadow)}
+.glass-in{background:var(--glass-in);border:1px solid var(--line);border-radius:16px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
